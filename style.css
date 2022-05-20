@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope;
+}
+
+:root {
+    --primaryCyan: hsl(193, 38%, 86%);
+    --primaryGreen: hsl(150, 100%, 66%);
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+h1 {
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--primaryGreen);
+    margin-bottom: 20px;
+}
+
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--darkBlue);
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    min-width: 300px;
+    max-width: 480px;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 14px;
+    background-color: var(--darkGrayishBlue);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#adviceText {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--primaryCyan);
+}
+
+.dividerDesktop,
+.dividerMobile {
+    margin: 28px 0 20px;
+    width: 100%;
+    height: auto;
+}
+
+#roll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primaryGreen);
+    transition: box-shadow 500ms ease-in-out;
+}
+
+#roll:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 6px rgba(83, 255, 171, 0.5);
+    transition: box-shadow 500ms ease-in-out;
+}
+
+@media screen and (max-width: 375px) {
+    .dividerDesktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 376px) {
+    .dividerMobile {
+        display: none;
+    }
+}
